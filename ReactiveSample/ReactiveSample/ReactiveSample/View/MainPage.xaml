@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rxui:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                          xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                          xmlns:local="clr-namespace:Popup_Demo"
+                          x:Class="Popup_Demo.MainPage" 
+                          x:TypeArguments="local:ViewModel">
+    
+    <ContentPage.Content>
+        <syncfusion:SfListView x:Name="Articles" BackgroundColor="AliceBlue" ItemSize="60" ItemsSource="{Binding Articles}">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" Padding="20,10">
+                                        <Label FontAttributes="Bold" Text="{Binding Title}"
+                                               HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding Author}" TextColor="Gray"/>
+                                    </StackLayout>
+                                    <StackLayout HeightRequest="3" BackgroundColor="DarkSlateGray"/>
+                                </StackLayout>
+                            </Grid>
+
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </ContentPage.Content>
+
+
+</rxui:ReactiveContentPage>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="reactiveui" Version="9.0.1" />
+    <PackageReference Include="ReactiveUI.XamForms" Version="9.0.1" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.2.0.41" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.709244" />
+  </ItemGroup>
+</Project>

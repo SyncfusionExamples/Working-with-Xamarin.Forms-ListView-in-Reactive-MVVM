@@ -5,11 +5,11 @@ This example demonstrates how to define listview with reactive MVVM.
 ## Sample
 
 ```xaml
-<syncfusion:SfListView x:Name="Articles" BackgroundColor="AliceBlue" ItemSize="60" ItemsSource="{Binding Articles}">
+<syncfusion:SfListView
+            ItemSize="60"
+            ItemsSource="{Binding Articles}">
     <syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
-            <ViewCell>
-                <ViewCell.View>
                     <Grid>
                         <StackLayout Orientation="Vertical">
                             <StackLayout Orientation="Horizontal" Padding="20,10">
@@ -20,9 +20,6 @@ This example demonstrates how to define listview with reactive MVVM.
                             <StackLayout HeightRequest="3" BackgroundColor="DarkSlateGray"/>
                         </StackLayout>
                     </Grid>
-
-                </ViewCell.View>
-            </ViewCell>
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
 </syncfusion:SfListView>
